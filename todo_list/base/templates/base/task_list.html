@@ -8,6 +8,14 @@
 <hr>
 <h1>My to do list</h1>
 
+<form method="GET" style="display: flex;">
+    <input type='text' name='search-area' placeholder="Search your task" value="{{search_input}}">
+    <input type="submit" value='Search'>
+</form>
+{% if tasks|length > 0 %}
+<a id="add-link" href="{% url 'task-create' %}">&#x2b;</a>
+{% endif %}
+
 <a href="{% url 'task-create' %}" >Add Task</a> 
 <table>
     <tr>
