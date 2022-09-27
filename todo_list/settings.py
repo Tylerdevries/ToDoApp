@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-tylerdevries-todoapp-ojeua1j6q4b.ws-eu67.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-tylerdevries-todoapp-g00xmnh6ezm.ws-eu67.gitpod.io']
 
 
 # Application definition
