@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
-from pathlib import Path 
+from pathlib import Path
 import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-tylerdevries-todoapp-yjc8jn4kxib.ws-eu67.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-tylerdevries-todoapp-ojeua1j6q4b.ws-eu67.gitpod.io']
 
 
 # Application definition
@@ -79,12 +79,15 @@ WSGI_APPLICATION = 'todo_list.wsgi.application'
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': 'mydatabase',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse('postgres://qopokhiqagyeyn:6334b90785ca204937d9d33bbb3ce6c0a10708938c166a8223841b96f5c790a2@ec2-3-229-165-146.compute-1.amazonaws.com:5432/dcaahd59d0i43r')}
+    'default': dj_database_url.parse('postgres://ldtfsfujhywshy:671b0905e77be9b733b84b448c959bc6f882208bece0f8881289c1ad39f39d82@ec2-52-207-15-147.compute-1.amazonaws.com:5432/d1sp58sf50bsua')
+}
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -121,6 +124,7 @@ LOGIN_URL = 'login'
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
