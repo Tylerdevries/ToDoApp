@@ -25,9 +25,9 @@ SECRET_KEY = 'django-insecure-m=6j4o-t25s0eoa^s^29=7tqds!(_4s1#mk#piimx##l16@=z7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tylertodo.herokuapp.com']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-tylerdevries-todoapp-g00xmnh6ezm.ws-eu67.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['tylertodo.herokuapp.com']
 
 
 # Application definition
