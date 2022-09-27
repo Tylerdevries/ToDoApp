@@ -7,7 +7,12 @@ The site is targeting towards all people who are looking to make us of a unique 
 ![todo app](https://user-images.githubusercontent.com/93283135/192441816-70012c1a-1640-4d59-be2d-f4e792c9db7c.PNG)
 
 ## Features:
+
+
 ### General Navigation:
+
+I Designed the site with UX in mind.
+
 Users are initially directed to a login page where they can sign in using a username and password or use a register redirect to sign up for the app.
 
 New users will be directed to a register page where there will be three fields for them to fill out, Username, password and password confirmation. 
@@ -16,11 +21,10 @@ Users that have either logged in or registered will be directed to the home page
 
 Returning users can delete or update alreaady created tasks.
 
-The site has been styled using CSS.
+The site has been styled using CSS in a main.html file which in pulled from in all other template files. 
 
 ![login screen](https://user-images.githubusercontent.com/93283135/192444712-e37a3582-106e-45c1-8c30-dc1ccbf2cf81.PNG)
 ![login view](https://user-images.githubusercontent.com/93283135/192444694-a841206d-cc1b-4fa8-9dad-c5098230c10c.PNG)
-
 
 
 ### The Login Page:
@@ -76,10 +80,8 @@ Above is the view for the functioning of this page.
 This view is called on within the urls.py file and is tested on in the test.py file. 
 
 
-
 ![create task](https://user-images.githubusercontent.com/93283135/192454054-921d4d9a-10ee-4966-ac9a-4ee524968424.PNG)
 ![create tasks](https://user-images.githubusercontent.com/93283135/192454110-8c193a54-4e95-48bb-a111-d86142cab263.PNG)
-
 
 
 ### The Task Creation Form:
@@ -115,59 +117,31 @@ Here the user is shown what was previously filled out in these fields including 
 
 Above is the views for the functioning of these pages.
 
-![66666666666666666666666666666666666](https://user-images.githubusercontent.com/93283135/147124550-b3bb42e2-7c62-49b4-b383-f62aa33e0bb8.PNG)
-
-
-
-### The footer:
-
-I created a simple footer with links to social media platforms.
-
-I linked facebook and twitter.
-
-I customised these icons using CSS. 
-
-![898989889889898989](https://user-images.githubusercontent.com/93283135/147102370-f567fb2d-1e27-4889-b4c2-2db81a5a8932.PNG)
-
 ## Testing
 
-I tested that the page works in the primary browsers used on desktop and mobile. (Edge, Chrome, Firefox and Safari)
 
-I confirmed that the project is perfectly responsive and works on all screen sizes using Developer Tools on Google Chrome.
+![testing](https://user-images.githubusercontent.com/93283135/192486724-42b0fb0b-b4de-4b20-84bc-96279331ddf6.PNG)
 
-I confirmed that all sections are readable and easy to access.
 
-I confirmed that all elements are working, ie. Navbar, buttons and Email Form.
+I used the included django testing functions to test my views.
 
-## Bugs
+I tested the responses of each of the major views as seen above. 
+
+## Major Errors in Development
 
 ### Solved Bugs
 
-I initially had issues with images appearing on the deployed page, I fixed this issue by using proper relative paths in my img elements. 
+An initial issue I ran into with working with the most recent build of django was a crsf token issue when loading the homepage.
 
-Code pre fix:
+I fixed this by amending the setting.py file and adding CSRF_TRUSTED_ORIGINS = [
+    (https://tylertodo.herokuapp.com)
+]
 
-![4141414141](https://user-images.githubusercontent.com/93283135/147103532-d538ff32-8172-40ee-b9e2-769b998681fc.PNG)
+I also ran into an issue when deploying my app to heroku. The issue was that the push to heroku main would failed due to the organising of my files and folders.
 
-Code post fix:
+I solved this by moving all files and folders to the root directory of the main repo and adding a Procfile prior to pushing.
 
-![55585858585](https://user-images.githubusercontent.com/93283135/147103568-7d68c784-912a-489d-bc4a-c0f9c08744ca.PNG)
-
-## Validator Testing
-
-### HTML:
-
-I used the W3C validator to check for any issues in the code and to quickly resolve said issues.
-
-### CSS:
-
-I used the Jigsaw Validator to check for any CSS issues and to again quickly resolve them.
-
-### Accessbility:
-
-I confirmed with the Lighthouse Tool in chrome that my site is easily readable and accessible. 
-
-![555555555555555555555555555555555555555555555555555555](https://user-images.githubusercontent.com/93283135/147125198-fadd21e6-13f8-46b5-9b19-213da50ae118.PNG)
+I also reverted to heroku stack 20 and python-3.9.14 to solve this issue. 
 
 ### Unfixed Bugs
 
@@ -175,27 +149,29 @@ No unfixed bugs
 
 ## Deployment
 
-The site was deployed through Github pages. 
+The site was deployed through Heroku. 
 
 I used the following steps to deploy my page:
-1. Use GitHub Directory, navigate to the Settings Page.
-2. From the Settings menu select Pages.
-3. From the Source option select Main Branch and Root Folder
-4. Click save.
-5. Wait a couple of minutes and the page is live.
+1. I moved all files and folders to the main root.
+2. I installed gunicorn and dj-database-url.
+3. I logged into my installed heroku within the repo terminal.
+4. I created a new heroku app linking the repo to my heroku account.
+5. I created a new postgresql database on heroku and linked it to my repo for use instead of sqlite.
+6. I pushed all these changes to github and made my first deployment to heroku
+7. Created the Environment Variables within setting.py, gitpod workspaces and heroku.
+8. Hid the SECRET_KEY
 
-The livelink can be found here https://tylerdevries.github.io/TDV-Web-Design/#
+The livelink can be found here https://tylertodo.herokuapp.com/
 
 ## Credits
 
-I used the following sites as sources for images, CSS, HTML and Bootstrap components.
+The prior two walkthroughs in this module of the course. 
 
-unsplash.com
+I used the following sites as sources for django components.
 
-getbootstrap.com
+https://stackoverflow.com/
 
-fontawesome.com
+https://getbootstrap.com/
 
-getwaves.io
+https://ccbv.co.uk/projects/Django/4.0/
 
-cssgradient.io
