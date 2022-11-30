@@ -167,7 +167,7 @@ The livelink can be found here https://tylertodo.herokuapp.com/
 
 The prior two walkthroughs in this module of the course. 
 
-I used the following sites as sources for django components.
+I used the following sites as sources and tutorials for django components.
 
 https://stackoverflow.com/
 
@@ -175,3 +175,4 @@ https://getbootstrap.com/
 
 https://ccbv.co.uk/projects/Django/4.0/
 
+https://www.youtube.com/watch?v=llbtoQTt4qw&t=3511s
