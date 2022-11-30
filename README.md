@@ -1,4 +1,5 @@
 # To Do App
+This is a resubmission, fixing server 500 error and crediting followed tutorial. 
 This To Do App is a application developed by me inspired by both the todolist walkthrough project and the blog worked on prior to this project. The goal of this site is to allow individual users to sign in to create a fully amendable todolist where they can track tasks. 
 
 Users of this site will be able to register from the homepage. Once registered they can sign in and view their own data which will be saved via a postgresql database.
