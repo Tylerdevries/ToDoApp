@@ -1,5 +1,4 @@
 # To Do App
-This is a resubmission, fixing server 500 error and crediting followed tutorial. 
 
 The goal of this site is to allow individual users to sign in to create a fully amendable todolist where they can track tasks. 
 
